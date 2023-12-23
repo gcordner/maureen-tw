@@ -1,4 +1,12 @@
 <?php
+/**
+ * Maureen TW Theme functions and definitions
+ *
+ * @package maureen_tw
+ */
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
 /**
  * Theme setup.
@@ -23,7 +31,7 @@ function maureen_tw_setup() {
 		)
 	);
 
-    add_theme_support( 'custom-logo' );
+	add_theme_support( 'custom-logo' );
 	add_theme_support( 'post-thumbnails' );
 
 	add_theme_support( 'align-wide' );
@@ -31,9 +39,16 @@ function maureen_tw_setup() {
 
 	add_theme_support( 'editor-styles' );
 	add_editor_style( 'css/editor-style.css' );
+
+	// Add theme support for widgets.
+	add_theme_support( 'widgets' );
 }
 
 add_action( 'after_setup_theme', 'maureen_tw_setup' );
+
+
+require_once get_template_directory() . '/inc/widgets.php';
+
 
 /**
  * Enqueue theme assets.
@@ -42,7 +57,7 @@ function maureen_tw_enqueue_scripts() {
 	$theme = wp_get_theme();
 
 	wp_enqueue_style( 'tailpress', maureen_tw_asset( 'css/app.css' ), array(), $theme->get( 'Version' ) );
-	wp_enqueue_script( 'tailpress', maureen_tw_asset( 'js/app.js' ), array(), $theme->get( 'Version' ) );
+	wp_enqueue_script( 'tailpress', maureen_tw_asset( 'js/app.js' ), array(), $theme->get( 'Version' ), true );
 }
 
 add_action( 'wp_enqueue_scripts', 'maureen_tw_enqueue_scripts' );
@@ -50,7 +65,7 @@ add_action( 'wp_enqueue_scripts', 'maureen_tw_enqueue_scripts' );
 /**
  * Get asset path.
  *
- * @param string  $path Path to asset.
+ * @param string $path Path to asset.
  *
  * @return string
  */
@@ -59,7 +74,7 @@ function maureen_tw_asset( $path ) {
 		return get_stylesheet_directory_uri() . '/' . $path;
 	}
 
-	return add_query_arg( 'time', time(),  get_stylesheet_directory_uri() . '/' . $path );
+	return add_query_arg( 'time', time(), get_stylesheet_directory_uri() . '/' . $path );
 }
 
 /**
@@ -68,6 +83,7 @@ function maureen_tw_asset( $path ) {
  * @param string  $classes String of classes.
  * @param mixed   $item The current item.
  * @param WP_Term $args Holds the nav menu arguments.
+ * @param int     $depth The depth of the current menu item.
  *
  * @return array
  */
@@ -91,6 +107,7 @@ add_filter( 'nav_menu_css_class', 'maureen_tw_nav_menu_add_li_class', 10, 4 );
  * @param string  $classes String of classes.
  * @param mixed   $item The current item.
  * @param WP_Term $args Holds the nav menu arguments.
+ * @param int     $depth The depth of the current menu item.
  *
  * @return array
  */
@@ -107,3 +124,4 @@ function maureen_tw_nav_menu_add_submenu_class( $classes, $args, $depth ) {
 }
 
 add_filter( 'nav_menu_submenu_css_class', 'maureen_tw_nav_menu_add_submenu_class', 10, 3 );
+
