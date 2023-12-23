@@ -1,0 +1,251 @@
+/* oswald-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/oswald/oswald-v53-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* suisseneue */
+@font-face {
+    font-display: swap;
+    font-family: sharpgroteskxtrabook-12;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SharpGrotesk/SharpGroteskXtraBook-12.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: sharpgroteskxtrabook-19;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SharpGrotesk/SharpGroteskXtraBook-19.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: sharpgroteskxtrabook-22;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SharpGrotesk/SharpGroteskXtraBook-22.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: sharpgroteskxtrabookitl-12;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SharpGrotesk/SharpGroteskXtraBookItl-12.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: sharpgroteskxtrabookitl-19;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SharpGrotesk/SharpGroteskXtraBookItl-19.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: sharpgroteskxtrabookitl-22;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SharpGrotesk/SharpGroteskXtraBookItl-22.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: sharpgroteskxtramed-12;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SharpGrotesk/SharpGroteskXtraMed-12.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: sharpgroteskxtramed-19;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SharpGrotesk/SharpGroteskXtraMed-19.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: sharpgroteskxtramed-22;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SharpGrotesk/SharpGroteskXtraMed-22.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: sharpgroteskxtrameditl-12;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SharpGrotesk/SharpGroteskXtraMedItl-12.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: sharpgroteskxtrameditl-19;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SharpGrotesk/SharpGroteskXtraMedItl-19.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: sharpgroteskxtrameditl-22;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SharpGrotesk/SharpGroteskXtraMedItl-22.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: sharpgroteskxtrasmbld-12;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SharpGrotesk/SharpGroteskXtraSmBld-12.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: sharpgroteskxtrasmbld-19;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SharpGrotesk/SharpGroteskXtraSmBld-19.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: sharpgroteskxtrasmbld-22;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SharpGrotesk/SharpGroteskXtraSmBld-22.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: sharpgroteskxtrasmblditl-12;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SharpGrotesk/SharpGroteskXtraSmBldItl-12.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: sharpgroteskxtrasmblditl-19;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SharpGrotesk/SharpGroteskXtraSmBldItl-19.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: sharpgroteskxtrasmblditl-22;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SharpGrotesk/SharpGroteskXtraSmBldItl-22.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: suisseneue-light-webs;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SuisseNeue/SuisseNeue-Light-WebS.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: suisseneue-light-webxl;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SuisseNeue/SuisseNeue-Light-WebXL.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: suisseneue-lightitalic-webs;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SuisseNeue/SuisseNeue-LightItalic-WebS.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: suisseneue-lightitalic-webxl;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SuisseNeue/SuisseNeue-LightItalic-WebXL.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: suisseneue-medium-webs;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SuisseNeue/SuisseNeue-Medium-WebS.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: suisseneue-medium-webxl;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SuisseNeue/SuisseNeue-Medium-WebXL.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: suisseneue-mediumitalic-webs;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SuisseNeue/SuisseNeue-MediumItalic-WebS.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: suisseneue-mediumitalic-webxl;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SuisseNeue/SuisseNeue-MediumItalic-WebXL.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: suisseneue-regular-webs;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SuisseNeue/SuisseNeue-Regular-WebS.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: suisseneue-regular-webxl;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SuisseNeue/SuisseNeue-Regular-WebXL.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: suisseneue-regularitalic-webs;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SuisseNeue/SuisseNeue-RegularItalic-WebS.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: suisseneue-regularitalic-webxl;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/SuisseNeue/SuisseNeue-RegularItalic-WebXL.woff2') format('woff2');
+}

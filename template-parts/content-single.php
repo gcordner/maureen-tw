@@ -1,3 +1,19 @@
+<?php
+/**
+ * Single post partial template
+ *
+ * @package Maureen-tw
+ */
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
+$event_date   = get_field( 'event_date' );
+$event_source = get_field( 'source' );
+$source_url   = get_field( 'source_link' );
+
+?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<header class="entry-header mb-4">
@@ -7,7 +23,20 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
+		<div class="event-source">
+		<p><b>Source:</b> 
+		<?php
+		if ( ! empty( $source_url ) ) :
+			// Output anchor tag when $source_url is not empty.
+			echo '<a href="' . esc_url( $source_url ) . '" target="_blank">' . esc_html( $event_source ) . '</a>';
+	else :
+		// Output $event_source without anchor tag when $source_url is empty.
+		echo esc_html( $event_source );
+	endif;
+	?>
 
+</p>
+		</div>
 		<?php
 			wp_link_pages(
 				array(
@@ -19,7 +48,7 @@
 					'separator'   => '<span class="screen-reader-text">, </span>',
 				)
 			);
-		?>
+			?>
 	</div>
 
 </article>
