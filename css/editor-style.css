@@ -56,6 +56,14 @@
     margin-top: 2rem;
     margin-bottom: 2rem
 }
+.-mx-4 {
+    margin-left: -1rem;
+    margin-right: -1rem
+}
+.mx-4 {
+    margin-left: 1rem;
+    margin-right: 1rem
+}
 .mb-1 {
     margin-bottom: 0.25rem
 }
@@ -76,6 +84,9 @@
 }
 .mt-4 {
     margin-top: 1rem
+}
+.ml-4 {
+    margin-left: 1rem
 }
 .inline-block {
     display: inline-block
@@ -449,6 +460,9 @@ body {
     }
     .lg\:mt-0 {
         margin-top: 0px
+    }
+    .lg\:ml-4 {
+        margin-left: 1rem
     }
     .lg\:block {
         display: block
