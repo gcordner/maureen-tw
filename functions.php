@@ -125,3 +125,11 @@ function maureen_tw_nav_menu_add_submenu_class( $classes, $args, $depth ) {
 
 add_filter( 'nav_menu_submenu_css_class', 'maureen_tw_nav_menu_add_submenu_class', 10, 3 );
 
+function modify_archive_and_index_query( $query ) {
+	if ( $query->is_main_query() && ( $query->is_archive() || $query->is_home() ) ) {
+		$query->set( 'post_type', array( 'post', 'page', 'event' ) ); // Include your post types.
+		$query->set( 'orderby', 'date' ); // Order by post date.
+		$query->set( 'order', 'ASC' ); // Order in ascending order.
+	}
+}
+add_action( 'pre_get_posts', 'modify_archive_and_index_query' );

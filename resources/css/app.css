@@ -3,5 +3,6 @@
 @import "tailwindcss/utilities";
 
 @import "theme/fonts.css";
+@import "theme/buttons.css";
 @import "theme/typography.css";
 @import "theme/custom.css";
