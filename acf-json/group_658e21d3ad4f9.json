@@ -100,7 +100,7 @@
                 "operator": "==",
                 "value": "event"
             }
-        ]
+        ],
     ],
     "menu_order": 0,
     "position": "normal",
@@ -111,5 +111,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1703814678
+    "modified": 1703955242
 }
