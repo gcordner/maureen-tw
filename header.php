@@ -68,7 +68,6 @@
 
 	<div id="content" class="site-content flex-grow">
 		<?php if ( is_front_page() ) : ?>
-			<!-- Start introduction -->
 			<!-- Additional Content Here -->
 		<?php endif; ?>
 

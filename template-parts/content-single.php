@@ -9,8 +9,10 @@
 defined( 'ABSPATH' ) || exit;
 
 $event_date   = get_field( 'event_date' );
-$event_source = get_field( 'source' );
-$source_url   = get_field( 'source_link' );
+$allowed_tags = array(
+	'i'  => array(),
+	'em' => array(),
+);
 
 ?>
 
@@ -24,18 +26,56 @@ $source_url   = get_field( 'source_link' );
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<div class="event-source">
-		<p><b>Source:</b> 
 		<?php
-		if ( ! empty( $source_url ) ) :
-			// Output anchor tag when $source_url is not empty.
-			echo '<a href="' . esc_url( $source_url ) . '" target="_blank">' . esc_html( $event_source ) . '</a>';
-	else :
-		// Output $event_source without anchor tag when $source_url is empty.
-		echo esc_html( $event_source );
-	endif;
-	?>
+		// Check if the flexible content field 'links_resources' exists.
+		if ( have_rows( 'links_resources' ) ) :
+			?>
+<div class="resources">
+		<h3>Resources</h3>
+		<ol>
+				<?php
 
-</p>
+				// Loop through the rows of data.
+				while ( have_rows( 'links_resources' ) ) :
+					the_row();
+
+					// Get the layout name.
+					$layout_name = get_row_layout();
+
+					// Handle 'sources' layout.
+					if ( 'sources' === $layout_name ) :
+
+						// Get the link array from the 'source' subfield.
+						$link_array = get_sub_field( 'source' );
+
+						// Check if the link array is not empty and output the link.
+						if ( $link_array ) :
+							echo '<li><a href="' . esc_url( $link_array['url'] ) . '" target="_blank">' . esc_html( $link_array['title'] ) . '</a></li>';
+					endif;
+
+						// Handle 'footnote' layout.
+					elseif ( 'footnote' === $layout_name ) :
+
+						// Get the text from the 'footnote' subfield.
+						$footnote_text = get_sub_field( 'footnote' );
+
+						// Check if the footnote text is not empty and output it.
+						if ( $footnote_text ) :
+							echo '<li>' . wp_kses( $footnote_text, $allowed_tags ) . '</li>';
+						endif;
+
+					endif;
+
+			endwhile;
+				?>
+
+</ol>
+		</div>
+				<?php
+endif;
+
+		?>
+
 		</div>
 		<?php
 			wp_link_pages(

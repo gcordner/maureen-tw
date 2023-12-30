@@ -1,0 +1,115 @@
+{
+    "key": "group_658e21d3ad4f9",
+    "title": "Links and Resources",
+    "fields": [
+        {
+            "key": "field_658e21d3891b8",
+            "label": "Links and Resources",
+            "name": "links_resources",
+            "aria-label": "",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_658e21e07a641": {
+                    "key": "layout_658e21e07a641",
+                    "name": "sources",
+                    "label": "Sources",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_658e222a891b9",
+                            "label": "Source",
+                            "name": "source",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_658e226e891bb": {
+                    "key": "layout_658e226e891bb",
+                    "name": "footnote",
+                    "label": "Footnote",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_658e227b891bd",
+                            "label": "Footnote",
+                            "name": "footnote",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "min": "",
+            "max": "",
+            "button_label": "Add Row"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "event"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1703814678
+}
