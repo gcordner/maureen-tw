@@ -125,11 +125,38 @@ function maureen_tw_nav_menu_add_submenu_class( $classes, $args, $depth ) {
 
 add_filter( 'nav_menu_submenu_css_class', 'maureen_tw_nav_menu_add_submenu_class', 10, 3 );
 
-function modify_archive_and_index_query( $query ) {
-	if ( $query->is_main_query() && ( $query->is_archive() || $query->is_home() ) ) {
-		$query->set( 'post_type', array( 'post', 'page', 'event' ) ); // Include your post types.
-		$query->set( 'orderby', 'date' ); // Order by post date.
-		$query->set( 'order', 'ASC' ); // Order in ascending order.
+/**
+ * Sort stories by title.
+ *
+ * @param WP_Query $query The query object.
+ */
+function sort_stories_by_title( $query )  {
+	if (!is_admin() && $query->is_main_query()) {
+		// Check if it's the archive for 'story' post type.
+		if (is_post_type_archive('story')) {
+			// Set the query to order by title in ascending order.
+			$query->set('orderby', 'title');
+			$query->set('order', 'ASC');
+		}
 	}
 }
-add_action( 'pre_get_posts', 'modify_archive_and_index_query' );
+add_action('pre_get_posts', 'sort_stories_by_title');
+
+/**
+ * Sort archives by date ascending.
+ *
+ * @param WP_Query $query The query object.
+ */
+function maureen_tw_sort_archives_except_story($query) {
+    if (!is_admin() && $query->is_main_query() && $query->is_archive() && !is_post_type_archive('story')) {
+        // Set the query to order by post date in ascending order for all archives except 'story'
+        $query->set('orderby', 'date');
+        $query->set('order', 'ASC');
+    }
+}
+add_action('pre_get_posts', 'maureen_tw_sort_archives_except_story');
+
+
+
+
+
