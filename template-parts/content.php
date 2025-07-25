@@ -5,7 +5,7 @@
 		<time datetime="<?php echo get_the_date( 'c' ); ?>" itemprop="datePublished" class="text-sm text-gray-700"><?php echo get_the_date(); ?></time>
 	</header>
 
-	<?php if ( is_search() || is_archive() ) : ?>
+	<?php if ( is_search() || $is_people_tax_root || ( is_archive() && !is_tax( 'people' ) ) ) : ?>
 
 		<div class="entry-summary">
 			<?php the_excerpt(); ?>

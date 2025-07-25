@@ -156,7 +156,19 @@ function maureen_tw_sort_archives_except_story($query) {
 }
 add_action('pre_get_posts', 'maureen_tw_sort_archives_except_story');
 
+// Debugging function to show all taxonomies and their attached post types.
+// add_action( 'init', function() {
+//     if ( ! current_user_can( 'manage_options' ) ) {
+//         return; // Only show to admins.
+//     }
 
+//     $taxonomies = get_taxonomies( array(), 'objects' );
+//     echo '<pre style="background:#fff; padding:1rem; font-size:14px;">';
+//     foreach ( $taxonomies as $taxonomy ) {
+//         echo $taxonomy->name . ' — attached to: ' . implode( ', ', $taxonomy->object_type ) . "\n";
+//     }
+//     echo '</pre>';
+// }, 99 );
 
 
 
